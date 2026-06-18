@@ -1,0 +1,17 @@
+{
+  "eval_id": 2,
+  "eval_name": "samdunning-positions-10-20",
+  "configuration": "without_skill",
+  "summary": { "passed": 5, "failed": 2, "total": 7, "pass_rate": 0.714 },
+  "timing": { "total_tokens": 96059, "duration_ms": 375430, "total_duration_seconds": 375.4 },
+  "tool_calls": 58,
+  "expectations": [
+    { "text": "GSC or Ahrefs data is pulled for the specified domain (or its associated content site)", "passed": false, "evidence": "samdunning.org has DR 0.0. Agent redirected to breakingb2b.com. GSC authenticated to risevision.com. Used Ahrefs for breakingb2b.com." },
+    { "text": "Focus is on positions 10-20 as requested", "passed": true, "evidence": "All 5 opportunities are in positions 13–22. Explicitly addresses 'position 10-20 stuff'." },
+    { "text": "Opportunities specify what type of content to build", "passed": true, "evidence": "'standalone guide', 'A listicle', 'separate page', 'rebuild the consolidated page', 'clean roundup'." },
+    { "text": "SERP format evidence is included (what currently ranks at #1)", "passed": true, "evidence": "Opp 1: 'SERP for b2b seo is entirely dominated by comprehensive guides: Semrush (DR 92), Backlinko (DR 90)'. Opp 5: 'A DR 33 site is ranking at position 5'." },
+    { "text": "Each opportunity has a suggested working title or slug", "passed": true, "evidence": "All opportunities have suggested slugs and titles." },
+    { "text": "Supporting keyword cluster is identified for each opportunity", "passed": false, "evidence": "No supporting keyword clusters listed for any opportunity. Primary keyword only." },
+    { "text": "A clear distinction is made between 'new page needed' vs 'update existing page'", "passed": true, "evidence": "Opp 4 (cannibalization): 'consolidation + upgrade, not a new page'. Others clearly new pages." }
+  ]
+}

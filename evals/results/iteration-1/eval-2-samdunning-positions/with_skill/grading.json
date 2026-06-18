@@ -1,0 +1,17 @@
+{
+  "eval_id": 2,
+  "eval_name": "samdunning-positions-10-20",
+  "configuration": "with_skill",
+  "summary": { "passed": 6, "failed": 1, "total": 7, "pass_rate": 0.857 },
+  "timing": { "total_tokens": 114795, "duration_ms": 463863, "total_duration_seconds": 463.9 },
+  "tool_calls": 67,
+  "expectations": [
+    { "text": "GSC or Ahrefs data is pulled for the specified domain (or its associated content site)", "passed": false, "evidence": "samdunning.org has DR 0.0 and no organic keywords. Agent correctly identified breakingb2b.com as the associated content site and used that. GSC MCP authenticated to a different account." },
+    { "text": "Focus is on positions 10-20 as requested", "passed": true, "evidence": "Report opens with '13 Keywords Ranking Positions 10–20' table. All 6 gap opportunities drawn from this range." },
+    { "text": "Opportunities specify what type of content to build", "passed": true, "evidence": "Every gap labelled: 'NEW LISTICLE', 'NEW PILLAR GUIDE', 'NEW SERVICE PAGE', 'NEW GUIDE', 'NEW ROUNDUP ARTICLE'." },
+    { "text": "SERP format evidence is included (what currently ranks at #1)", "passed": true, "evidence": "Every gap has 'What #1 looks like' with specific competitor URLs, DRs, traffic, page type. e.g. GAP 2: 'Pos 4 is Semrush's B2B SEO: A Complete Strategy (DR 92, tagged Tutorial/Guide)'." },
+    { "text": "Each opportunity has a suggested working title or slug", "passed": true, "evidence": "Every gap has 'Suggested title' and 'Suggested slug' fields." },
+    { "text": "Supporting keyword cluster is identified for each opportunity", "passed": true, "evidence": "Every gap has 'Supporting cluster' with keywords and volumes. e.g. GAP 1: 'b2b seo agencies (1,200/mo pos 33), b2b seo firm (500/mo pos 25), top b2b seo company (400/mo)'." },
+    { "text": "A clear distinction is made between 'new page needed' vs 'update existing page'", "passed": true, "evidence": "Every gap has 'New page vs update' field. e.g. 'New page (keep /b2b-seo-agency as your service page)'; 'Expand existing OR new page'." }
+  ]
+}

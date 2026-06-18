@@ -1,0 +1,20 @@
+{
+  "eval_id": 1,
+  "eval_name": "breakingb2b-intent-gap",
+  "configuration": "with_skill",
+  "summary": { "passed": 8, "failed": 2, "total": 10, "pass_rate": 0.80 },
+  "timing": { "total_tokens": 112024, "duration_ms": 544945, "total_duration_seconds": 544.9 },
+  "tool_calls": 51,
+  "expectations": [
+    { "text": "Report includes a site baseline section with DR and organic traffic metrics", "passed": true, "evidence": "Site Overview table: organic keywords 76, estimated traffic 1,847/mo, organic traffic value ~$16,862/mo." },
+    { "text": "An opportunity table is produced with at least one content recommendation", "passed": true, "evidence": "Summary Table with 10 gaps, each with keyword, volume, position, current page, SERP wants, gap type, action." },
+    { "text": "Each opportunity includes the gap type", "passed": true, "evidence": "Summary Table has Gap Type column. Narrative sections describe format mismatch, cannibalization, etc." },
+    { "text": "SERP evidence is cited for at least one opportunity", "passed": true, "evidence": "Every gap has 'What Google rewards' section with specific competitor URLs, DRs, traffic, and page type tags." },
+    { "text": "At least one Ahrefs tool was used to validate keyword volume and KD", "passed": true, "evidence": "KD values cited throughout (KD2, KD3, KD5, KD6). Volumes from Ahrefs Site Explorer." },
+    { "text": "At least one GSC tool or Ahrefs site-explorer tool was used to pull keyword data", "passed": true, "evidence": "Ahrefs site-explorer-organic-keywords used as primary data source." },
+    { "text": "At least one ranking page was crawled to assess intent match", "passed": true, "evidence": "GAP 7 quotes H1 verbatim: 'Construction SEO agency that drives project inquiries and clients'. Multiple page-level content assessments." },
+    { "text": "Branded terms are excluded from the recommendations", "passed": true, "evidence": "No Breaking B2B branded terms appear as target keywords." },
+    { "text": "A quick wins section is present distinguishing page updates from new-content opportunities", "passed": true, "evidence": "Tier 3 'Fix Existing' section with 4 items: retitles, cannibalization merges, page reframes." },
+    { "text": "Keyword volumes are labelled as Global MSV, not US-only", "passed": false, "evidence": "Volumes expressed as 'vol/mo' not 'Global MSV'. Scope note says 'US market'." }
+  ]
+}

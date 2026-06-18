@@ -1,0 +1,21 @@
+{
+  "eval_id": 1,
+  "eval_name": "breakingb2b-intent-gap",
+  "configuration": "without_skill",
+  "summary": { "passed": 7, "failed": 3, "total": 10, "pass_rate": 0.70 },
+  "timing": { "total_tokens": 101346, "duration_ms": 545275, "total_duration_seconds": 545.3 },
+  "tool_calls": 41,
+  "expectations": [
+    { "text": "Report includes a site baseline section with DR and organic traffic metrics", "passed": false, "evidence": "Executive summary mentions 66 non-branded keywords but no dedicated site baseline section with DR or traffic value." },
+    { "text": "An opportunity table is produced with at least one content recommendation", "passed": true, "evidence": "Section 3 Prioritized Content Build List table with 13 items." },
+    { "text": "Each opportunity includes the gap type", "passed": true, "evidence": "Gap Type column in Section 3 table: 'Info → service page', 'Listicle → service page', 'Cannibalization', 'Scope mismatch'." },
+    { "text": "SERP evidence is cited for at least one opportunity", "passed": true, "evidence": "Gap 1: 'Top 5 results are exclusively educational guides/tutorials'. Gap 11: 'Top results are all tool-focused: LLMrefs, SE Ranking 10 Best LLM Tracking Tools'." },
+    { "text": "At least one Ahrefs tool was used to validate keyword volume and KD", "passed": true, "evidence": "All volumes from Ahrefs. Full appendix keyword table sourced from Ahrefs organic keywords." },
+    { "text": "At least one GSC tool or Ahrefs site-explorer tool was used to pull keyword data", "passed": true, "evidence": "Ahrefs site-explorer-organic-keywords used throughout." },
+    { "text": "At least one ranking page was crawled to assess intent match", "passed": true, "evidence": "Methodology: 'Crawling the ranking page to classify its actual content type'. H1 quotes from live pages throughout." },
+    { "text": "Branded terms are excluded from the recommendations", "passed": true, "evidence": "Scope: 'Non-branded keywords with 20+ monthly search volume'." },
+    { "text": "A quick wins section is present distinguishing page updates from new-content opportunities", "passed": true, "evidence": "Section 4 'Zero-Traffic Despite #1 Rankings' plus Low-effort items in priority table (301 redirects, on-page fixes)." },
+    { "text": "Keyword volumes are labelled as Global MSV, not US-only", "passed": false, "evidence": "Volumes expressed as 'vol/mo'. Scope note says US." }
+  ],
+  "notable": "Found 18 gaps vs 10 with_skill. Included full 66-keyword appendix table. Spotted zero-traffic #1 rankings (3 pages, 12,700 combined searches, 0 clicks) — highest-ROI finding in the analysis, missed by with_skill run."
+}

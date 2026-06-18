@@ -1,0 +1,52 @@
+{
+  "skill_name": "gsc-intent-gap-finder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run an intent gap analysis on breakingb2b.com. I want to find every keyword we rank for where the page doesn't actually match what searchers want — so I can figure out what new content to build. Exclude branded terms. Focus on anything with 20+ impressions a month.",
+      "expected_output": "A structured report listing content opportunities discovered from GSC/Ahrefs data. Should include: site baseline (DR, traffic), a prioritised opportunity table with primary keyword/Global MSV/KD/gap type/current URL, detailed breakdowns for top opportunities with SERP evidence and suggested content to build, cannibalization fixes if any found, zero-traffic rankings section, and quick wins for existing pages.",
+      "files": [],
+      "expectations": [
+        "Report includes a site baseline section with DR and organic traffic metrics",
+        "An opportunity table is produced with at least one content recommendation",
+        "Each opportunity includes the gap type (e.g. format mismatch, split intent, depth gap)",
+        "SERP evidence is cited for at least one opportunity (what content types rank #1 for target keywords)",
+        "At least one Ahrefs tool was used to validate keyword volume and KD",
+        "At least one GSC tool or Ahrefs site-explorer tool was used to pull keyword data",
+        "At least one ranking page was crawled to assess intent match",
+        "Branded terms are excluded from the recommendations",
+        "A quick wins section is present distinguishing page updates from new-content opportunities",
+        "Keyword volumes are labelled as Global MSV, not US-only"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need to find what new blog posts or guides I should create. Can you look at my GSC keywords for samdunning.org and find where I'm ranking but the page clearly isn't built for that query? Like position 10-20 stuff where someone could write a proper piece and do much better.",
+      "expected_output": "A content opportunity report focused on positions 10-20 where page intent doesn't match keyword intent. Should identify specific keywords where a dedicated new page would outperform the current ranking URL, with SERP analysis showing what format Google expects. Output should be actionable — specific working titles and content formats to build, not just a list of keywords.",
+      "files": [],
+      "expectations": [
+        "GSC or Ahrefs data is pulled for the specified domain (or its associated content site)",
+        "Focus is on positions 10-20 as requested",
+        "Opportunities specify what type of content to build (guide, listicle, comparison, etc.)",
+        "SERP format evidence is included (what currently ranks at #1 for target keywords)",
+        "Each opportunity has a suggested working title or slug",
+        "Supporting keyword cluster is identified for each opportunity",
+        "A clear distinction is made between 'new page needed' vs 'update existing page'"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Do a content gap analysis on my search console — domain is breakingb2b.com. I specifically want to know about any keywords where I have a commercial/landing page ranking but the SERP is clearly asking for informational content, and vice versa. Also flag any cannibalization you find. KD under 35 only please.",
+      "expected_output": "A focused report on intent-type mismatches (informational vs commercial page type mismatches) plus a cannibalization section. Should use cannibalization_check tool and serp-overview to verify intent type for each candidate. Filtered to KD ≤ 35. Output clearly separates commercial-page-for-informational-query gaps from informational-page-for-commercial-query gaps.",
+      "files": [],
+      "expectations": [
+        "Cannibalization check is performed and results are reported",
+        "Intent-type mismatches are specifically identified (commercial page for informational query, or vice versa)",
+        "All recommendations are filtered to KD ≤ 35 as requested",
+        "serp-overview is used to confirm SERP intent type for flagged keywords",
+        "Cannibalization section lists specific URL pairs/groups to consolidate",
+        "Report differentiates between two mismatch directions: commercial page ranking for informational query, and informational page ranking for commercial query"
+      ]
+    }
+  ]
+}
